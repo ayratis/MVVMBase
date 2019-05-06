@@ -4,10 +4,10 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/home"
             app:startDestination="@id/homeFragment">
 
-    <fragment android:id="@+id/homeFragment" android:name="com.ayratis.abstractapp.ui.home.HomeFragment"
+    <fragment android:id="@+id/homeFragment" android:name="com.ayratis.abstractapp.ui.main.home.HomeFragment"
               android:label="fragment_home" tools:layout="@layout/fragment_home">
         <action android:id="@+id/action_homeFragment_to_listFragment" app:destination="@id/listFragment"/>
     </fragment>
-    <fragment android:id="@+id/listFragment" android:name="com.ayratis.abstractapp.ui.list.ListFragment"
+    <fragment android:id="@+id/listFragment" android:name="com.ayratis.abstractapp.ui.main.list.ListFragment"
               android:label="ListFragment"/>
 </navigation>

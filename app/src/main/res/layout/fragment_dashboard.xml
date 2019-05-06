@@ -2,14 +2,14 @@
 <layout>
 
     <data>
-        <variable name="vm" type="com.ayratis.abstractapp.ui.dashoard.DashboardViewModel"/>
+        <variable name="vm" type="com.ayratis.abstractapp.ui.main.dashoard.DashboardViewModel"/>
     </data>
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
                  xmlns:tools="http://schemas.android.com/tools"
                  android:layout_width="match_parent"
                  android:layout_height="match_parent"
-                 tools:context=".ui.dashoard.DashboardFragment">
+                 tools:context=".ui.main.dashoard.DashboardFragment">
 
         <TextView
                 android:layout_width="match_parent"

@@ -1,10 +1,14 @@
 package com.ayratis.abstractapp.di
 
-import com.ayratis.abstractapp.MainActivity
-import com.ayratis.abstractapp.ui.dashoard.DashboardFragment
-import com.ayratis.abstractapp.ui.home.HomeFragment
-import com.ayratis.abstractapp.ui.list.ListFragment
-import com.ayratis.abstractapp.ui.notifications.NotificationsFragment
+import com.ayratis.abstractapp.di.module.AppModule
+import com.ayratis.abstractapp.di.module.DataBaseModule
+import com.ayratis.abstractapp.di.module.NetModule
+import com.ayratis.abstractapp.di.module.ViewModelModule
+import com.ayratis.abstractapp.ui.main._activity.MainActivity
+import com.ayratis.abstractapp.ui.main.dashoard.DashboardFragment
+import com.ayratis.abstractapp.ui.main.home.HomeFragment
+import com.ayratis.abstractapp.ui.main.list.ListFragment
+import com.ayratis.abstractapp.ui.main.notifications.NotificationsFragment
 import dagger.Component
 import javax.inject.Singleton
 

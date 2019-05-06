@@ -4,6 +4,6 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/dashboard"
             app:startDestination="@id/dashboardFragment">
 
-    <fragment android:id="@+id/dashboardFragment" android:name="com.ayratis.abstractapp.ui.dashoard.DashboardFragment"
+    <fragment android:id="@+id/dashboardFragment" android:name="com.ayratis.abstractapp.ui.main.dashoard.DashboardFragment"
               android:label="fragment_dashboard" tools:layout="@layout/fragment_dashboard"/>
 </navigation>
