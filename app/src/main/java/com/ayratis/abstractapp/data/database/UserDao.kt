@@ -8,6 +8,7 @@ import androidx.room.Query
 import com.ayratis.abstractapp.entity.User
 import io.reactivex.Completable
 import io.reactivex.Flowable
+import io.reactivex.Single
 
 @Dao
 interface UserDao {
@@ -17,6 +18,9 @@ interface UserDao {
 
     @Query("SELECT * FROM Users WHERE id > :id LIMIT :pageSize")
     fun getUsersFromId(id: Long, pageSize: Int): Flowable<List<User>>
+
+    @Query("SELECT * FROM Users WHERE id > :id LIMIT :pageSize")
+    fun getSingleUsersFromId(id: Long, pageSize: Int): Single<List<User>>
 
     @Query("SELECT * FROM Users LIMIT :count OFFSET :offset")
     fun getUsersByRange(count: Long, offset: Int): Flowable<List<User>>

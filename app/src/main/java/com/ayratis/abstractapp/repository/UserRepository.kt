@@ -1,6 +1,8 @@
 package com.ayratis.abstractapp.repository
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
+import com.ayratis.abstractapp.data.NetworkState
 import com.ayratis.abstractapp.entity.User
 import com.ayratis.abstractapp.utils.subOnIoObsOnMain
 import io.reactivex.Completable
