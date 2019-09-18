@@ -4,6 +4,19 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/dashboard"
             app:startDestination="@id/dashboardFragment">
 
-    <fragment android:id="@+id/dashboardFragment" android:name="com.ayratis.abstractapp.ui.main.dashoard.DashboardFragment"
-              android:label="fragment_dashboard" tools:layout="@layout/fragment_dashboard"/>
+    <fragment android:id="@+id/dashboardFragment" android:name="com.ayratis.abstractapp.ui.dashoard.DashboardFragment"
+              android:label="@string/title_dashboard" tools:layout="@layout/fragment_dashboard">
+		<action
+				android:id="@+id/action_dashboardFragment_to_imageCropFragment"
+				app:destination="@id/imageCropFragment"/>
+	</fragment>
+    <fragment
+            android:id="@+id/imageCropFragment"
+            android:name="com.ayratis.abstractapp.ui.dashoard.ImageCropFragment"
+            android:label="@string/title_image_crop"
+            tools:layout="@layout/fragment_image_crop">
+		<argument
+				android:name="uri"
+				app:argType="string"/>
+	</fragment>
 </navigation>

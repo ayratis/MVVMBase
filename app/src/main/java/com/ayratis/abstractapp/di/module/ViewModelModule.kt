@@ -4,10 +4,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.ayratis.abstractapp.arch.view_model.ViewModelFactory
 import com.ayratis.abstractapp.arch.view_model.ViewModelKey
-import com.ayratis.abstractapp.ui.main.dashoard.DashboardViewModel
-import com.ayratis.abstractapp.ui.main.home.HomeViewModel
-import com.ayratis.abstractapp.ui.main.list.ListViewModel
-import com.ayratis.abstractapp.ui.main.notifications.NotificationsViewModel
+import com.ayratis.abstractapp.ui.dashoard.DashboardViewModel
+import com.ayratis.abstractapp.ui.home.HomeViewModel
+import com.ayratis.abstractapp.ui.list.ListViewModel
+import com.ayratis.abstractapp.ui.notifications.NotificationsViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

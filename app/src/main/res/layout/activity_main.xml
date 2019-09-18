@@ -5,15 +5,17 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/container"
         android:orientation="vertical"
+        android:background="#fff"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.main._activity.MainActivity">
+        tools:context=".ui.MainActivity">
 
-    <com.ayratis.abstractapp.views.CenteredTitleToolbar
+    <com.ayratis.abstractapp.ui.views.CenteredTitleToolbar
             android:id="@+id/toolbar"
             android:background="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"/>
+
 
     <FrameLayout
             android:id="@+id/nav_host_container"

@@ -13,3 +13,10 @@ inline fun <reified T : ViewModel> FragmentActivity.injectViewModel(factory: Vie
 inline fun <reified T : ViewModel> Fragment.injectViewModel(factory: ViewModelProvider.Factory): T {
     return ViewModelProviders.of(this, factory)[T::class.java]
 }
+
+inline fun <reified T : ViewModel> Fragment.obtainSharedVM(activity: FragmentActivity?): T {
+    return activity?.run {
+        ViewModelProviders.of(this).get(T::class.java)
+    } ?: throw Exception("Invalid Activity")
+}
+

@@ -8,9 +8,8 @@ import retrofit2.http.Query
 
 interface GithubApi {
     @GET("/users")
-    fun getUsers(@Query("since") userId: Long, @Query("per_page") perPage: Int): Flowable<List<User>>
-
-    companion object {
-        const val BASE_URL = "https://api.github.com/"
-    }
+    fun getUsers(
+        @Query("since") userId: Long,
+        @Query("per_page") perPage: Int
+    ): Single<List<User>>
 }

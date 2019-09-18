@@ -6,12 +6,20 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
+import com.google.firebase.analytics.FirebaseAnalytics
 
 abstract class BaseFragment: Fragment() {
+
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         ViewCompat.requestApplyInsets(view) // для лисенера, рисовать на статус баре или нет
+        firebaseAnalytics = FirebaseAnalytics.getInstance(view.context)
     }
 
     protected fun hideKeyboard() {
@@ -25,7 +33,13 @@ abstract class BaseFragment: Fragment() {
             view.clearFocus()
             imm.hideSoftInputFromWindow(view.windowToken, 0)
         }
+    }
 
+    override fun onResume() {
+        super.onResume()
+        activity?.let {
+            firebaseAnalytics.setCurrentScreen(it, this.javaClass.simpleName, this.javaClass.simpleName)
+        }
     }
 
 }

@@ -4,6 +4,7 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/notifications"
             app:startDestination="@id/notificationsFragment">
 
-    <fragment android:id="@+id/notificationsFragment" android:name="com.ayratis.abstractapp.ui.main.notifications.NotificationsFragment"
-              android:label="fragment_notifications" tools:layout="@layout/fragment_notifications"/>
+    <fragment android:id="@+id/notificationsFragment" android:name="com.ayratis.abstractapp.ui.notifications.NotificationsFragment"
+              android:label="@string/title_notifications" tools:layout="@layout/fragment_notifications">
+    </fragment>
 </navigation>

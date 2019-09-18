@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1049227028288",
+    "firebase_url": "https://abstractapp.firebaseio.com",
+    "project_id": "abstractapp",
+    "storage_bucket": "abstractapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049227028288:android:74fe8ae029528e9d",
+        "android_client_info": {
+          "package_name": "com.ayratis.abstractapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049227028288-dln5ioetqviktmmh1sun19pgi0in7dr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMGUeHtQG4cKXXJqLwtYawLIm7TkhsGU8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049227028288-dln5ioetqviktmmh1sun19pgi0in7dr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

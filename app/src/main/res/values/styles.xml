@@ -17,6 +17,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
     <style name="ToolbarTitleText" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textAllCaps">true</item>
         <!--<item name="android:fontFamily">?attr/font_medium</item>-->

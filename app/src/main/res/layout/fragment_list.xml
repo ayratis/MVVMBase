@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
     <data>
-        <variable name="vm" type="com.ayratis.abstractapp.ui.main.list.ListViewModel"/>
+        <variable name="vm" type="com.ayratis.abstractapp.ui.list.ListViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,15 +24,6 @@
                     tools:listitem="@layout/item_user"/>
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-        <include
-                layout="@layout/item_network_state"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/usersSwipeRefreshLayout"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

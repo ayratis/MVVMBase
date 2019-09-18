@@ -1,5 +1,6 @@
 package com.ayratis.abstractapp.di.module
 
+import com.ayratis.abstractapp.BuildConfig
 import com.ayratis.abstractapp.data.api.GithubApi
 import com.google.gson.Gson
 import dagger.Module
@@ -24,13 +25,10 @@ class NetModule {
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient().newBuilder()
-            .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.HEADERS))
+            .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .addInterceptor { chain ->
                 val original = chain.request()
                 val request = original.newBuilder()
-//                    .header("Accept", "application/json")
-//                    .header("Authorization", "Bearer " + tokenHolder.getToken())
-//                    .method(original.method(), original.body())
                     .build()
                 chain.proceed(request)
             }
@@ -41,7 +39,7 @@ class NetModule {
     @Provides
     fun provideGithubApi(okHttpClient: OkHttpClient): GithubApi {
         return Retrofit.Builder()
-            .baseUrl(GithubApi.BASE_URL)
+            .baseUrl(BuildConfig.SERVER_PATH)
             .client(okHttpClient)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
