@@ -18,6 +18,7 @@ import com.ayratis.abstractapp.R
 import com.ayratis.abstractapp.arch.live_data.observeEvent
 import com.ayratis.abstractapp.arch.view_model.injectViewModel
 import com.ayratis.abstractapp.arch.view_model.obtainSharedVM
+import com.ayratis.abstractapp.arch.view_model.viewModelProvider
 import com.ayratis.abstractapp.databinding.FragmentDashboardBinding
 import com.ayratis.abstractapp.ui._base.BaseBindingFragment
 import com.ayratis.abstractapp.ui.dashoard.ImageCropFragment.Companion.ARG_URI
@@ -28,14 +29,13 @@ import java.io.IOException
 class DashboardFragment : BaseBindingFragment<FragmentDashboardBinding>() {
 
     override val layoutId: Int get() = R.layout.fragment_dashboard
-    private lateinit var viewModel: DashboardViewModel
+    private val viewModel: DashboardViewModel by viewModelProvider()
 
     private var currentPhotoPath: String? = null
     private lateinit var sharedPhotoVM: SharedPhotoVM
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = injectViewModel(App.appComponent.viewModelFactory())
         sharedPhotoVM = obtainSharedVM(activity)
     }
 

@@ -8,18 +8,14 @@ import com.ayratis.abstractapp.BR
 import com.ayratis.abstractapp.R
 import com.ayratis.abstractapp.arch.live_data.observeEvent
 import com.ayratis.abstractapp.arch.view_model.injectViewModel
+import com.ayratis.abstractapp.arch.view_model.viewModelProvider
 import com.ayratis.abstractapp.databinding.FragmentHomeBinding
 import com.ayratis.abstractapp.ui._base.BaseBindingFragment
 
 class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
 
     override val layoutId = R.layout.fragment_home
-    private lateinit var viewModel: HomeViewModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = injectViewModel(App.appComponent.viewModelFactory())
-    }
+    private val viewModel: HomeViewModel by viewModelProvider()
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

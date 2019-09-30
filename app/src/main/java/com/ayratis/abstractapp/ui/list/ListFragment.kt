@@ -3,10 +3,9 @@ package com.ayratis.abstractapp.ui.list
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ayratis.abstractapp.App
 import com.ayratis.abstractapp.R
 import com.ayratis.abstractapp.arch.live_data.observeEvent
-import com.ayratis.abstractapp.arch.view_model.injectViewModel
+import com.ayratis.abstractapp.arch.view_model.viewModelProvider
 import com.ayratis.abstractapp.databinding.FragmentListBinding
 import com.ayratis.abstractapp.ui._base.BaseBindingFragment
 import com.ayratis.abstractapp.ui.adapters.UsersAdapter
@@ -17,14 +16,10 @@ class ListFragment : BaseBindingFragment<FragmentListBinding>() {
 
     override val layoutId = R.layout.fragment_list
 
-    lateinit var viewModel: ListViewModel
+    private val viewModel: ListViewModel by viewModelProvider()
+
     private val userAdapter: UsersAdapter by lazy {
         UsersAdapter()
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = injectViewModel(App.appComponent.viewModelFactory())
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
